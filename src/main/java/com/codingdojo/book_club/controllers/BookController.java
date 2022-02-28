@@ -74,7 +74,6 @@ public class BookController {
 	@PutMapping("{id}/update")
 	public String update(@Valid @ModelAttribute("book") Book book, BindingResult result, HttpSession session) {
 		if (result.hasErrors()) {
-			//Produces an error for some reason I have been unable to discern
 			return "editBook.jsp";
 		}
 		
